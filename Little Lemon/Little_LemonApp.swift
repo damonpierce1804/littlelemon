@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Little_LemonApp: App {
+    
+    @StateObject var cartManager = CartManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(cartManager)
         }
     }
 }
